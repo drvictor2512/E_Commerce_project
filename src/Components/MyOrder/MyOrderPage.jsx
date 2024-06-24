@@ -4,7 +4,7 @@ import Table from '../Common/Table'
 import useData from '../../hooks/useData'
 import Loading from '../Common/Loading'
 const MyOrderPage = () => {
-  const {data : orders, isLoading, errors} = useData('/order')
+  const {data : orders, isLoading, errors} = useData('/order', null, ['myorders'], 1 * 60 * 1000)
   const getProductString = (order) => {
     const productString = order.products.map(p => `${p.product.title} (${p.quantity})`)
     return productString.join(", ")

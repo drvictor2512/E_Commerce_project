@@ -4,7 +4,7 @@ import Linkswithicon from './../Navbar/Linkswithicon';
 import config from '../../Config.json';
 import useData from '../../hooks/useData';
 const SidePage = () => {
-  const {data : categories, errors} = useData('/category')
+  const {data : categories, errors} = useData('/category', null, ['categories'], 24 * 60 * 60 * 1000)
   return (
     <aside className="product_side_bar">
         <h2>Category</h2>

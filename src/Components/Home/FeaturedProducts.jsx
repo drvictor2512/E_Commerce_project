@@ -4,7 +4,7 @@ import ProductCard from '../Products/ProductCard'
 import useData from './../../hooks/useData';
 import ProductLoading from '../Products/ProductLoading';
 const FeaturedProducts = () => {
-  const {data, isLoading, errors} = useData('/products/featured')
+  const {data, isLoading, errors} = useData('/products/featured', null, ["products", "featured"], 10 * 60 * 60 * 1000)
   const n = [1, 2, 3];
   return (
     <section className="featureproducts">

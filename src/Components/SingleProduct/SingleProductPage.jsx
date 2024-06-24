@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {memo, useContext, useState} from 'react'
 import './SingleProductPage.css'
 import QuantityInput from './QuantityInput';
 import config from '../../Config.json';
@@ -10,7 +10,7 @@ import UserContext from '../../contexts/UserContext';
 const SingleProductPage = () => {
     const [selectedImage, setSelectedImage] = useState(0);
     const {id} = useParams();
-    const {data : product, errors, isLoading} = useData(`/products/${id}`);
+    const {data : product, errors, isLoading} = useData(`/products/${id}`, null, ["products", id]);
     const [quantity, setQuantity] = useState(1);
     const {addtoCart} = useContext(CartContext);
     const user = useContext(UserContext)
@@ -40,4 +40,4 @@ const SingleProductPage = () => {
   )
 }
 
-export default SingleProductPage
+export default memo(SingleProductPage)
