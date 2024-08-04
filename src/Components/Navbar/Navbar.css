@@ -14,6 +14,7 @@
     border: 1px solid #cdcdcd;
     border-radius: 5px;
     padding: 3px;
+    margin-left: 30px;
     position: relative;
 }
 .navbar_search{
