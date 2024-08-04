@@ -1,6 +1,7 @@
 .navbar{
     justify-content: space-between;
     padding: 0 40px;
+    margin-top: 20px;
     background-color: #fff;
 }
 .navbar_heading{
@@ -43,6 +44,9 @@
 }
 .navbar_links a{
     margin: 15px;
+}
+.logo{
+    height: 80px;
 }
 .cart_counts{
     justify-content: center;
