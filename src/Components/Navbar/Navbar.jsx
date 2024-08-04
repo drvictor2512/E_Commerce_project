@@ -3,6 +3,7 @@ import './Navbar.css'
 import star from '../../assets/glowing-star.png'
 import id_button from '../../assets/id-button.png'
 import rocket from '../../assets/rocket.png'
+import logo  from '../../assets/logo1.jpg'
 import memo from '../../assets/memo.png'
 import order from '../../assets/package.png'
 import lock from '../../assets/locked.png'
@@ -56,7 +57,7 @@ const Navbar = () => {
   return (
     <nav className='navbar align_center'>
         <div className='align_center'>
-            <h1 className="navbar_heading">Tech-Shopping</h1>
+            <img className="logo" src={logo} />
             <form className='navbar_form align_center' onSubmit={handleSubmit}>
                 <input type="text"  className='navbar_search' placeholder='Search products' value={search} onChange={e => setSearch(e.target.value)} onKeyDown={handleKeyDown}/>
                 <button type='submit' className='search_button'>Search</button>
